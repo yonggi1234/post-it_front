@@ -32,7 +32,7 @@ class App {
       this.polygon = new Polygon(
         this.stageWidth / 2,
         this.stageHeight / 2,
-        this.stageHeight / 5, // radius
+        this.stageHeight / 3, // radius
         15
       );
     }
