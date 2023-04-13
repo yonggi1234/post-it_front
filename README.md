@@ -13,6 +13,8 @@
 *__- [File] html file -> ex1CircleRotate.html, js file -> rotate.js, css file -> style.css__*    
 *__- 실행 결과 화면__*    
 
-https://user-images.githubusercontent.com/128985167/231533850-185459b3-00da-4a15-af79-95d8ee894dac.mp4
+https://user-images.githubusercontent.com/128985167/231533850-185459b3-00da-4a15-af79-95d8ee894dac.mp4  
 
-*__- [New Update] 색 도형 -> 이미지 파일로 전환__* 
+*__- [New Update] 색 도형 -> 이미지 파일로 전환(회전 기능은 동일)__*   
+
+<img width="1280" alt="image" src="https://user-images.githubusercontent.com/128985167/231768676-ff96905b-45ea-48a1-b104-b2ceea115a7b.png">
