@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+}
+
+.container {
+  background-color: blue;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.draggable {
+  padding: 1rem;
+  background-color: yellow;
+  border: 1px solid black;
+  cursor: move;
+}
+
+.draggable.dragging {
+  opacity: .5;
+}
+
+style
+  table, th, td {
+  border: 1px solid #bcbcbc;
+}
+table {
+  width: 70%;
+  height: 100px;
+}
+
+
+td {
+width: 80px;
+height: 100px;
+overflow: auto;
+}
