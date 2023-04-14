@@ -7,7 +7,8 @@
 *__- 실행 결과 화면__*    
 
 <img width="1280" alt="image" src="https://user-images.githubusercontent.com/128985167/231531050-3fbc1249-c90b-4757-af4d-3825ba3f4679.png">
-### [*__2. Rotatie EX__*](https://github.com/yonggi1234/post-it_front/tree/ahyeon/src/main/board/PMI/EX)  
+
+### [*__2. Rotatie EX__*](https://github.com/yonggi1234/post-it_front/tree/ahyeon/src/main/board/PMI/EX)    
 
 *__- [Function] 15가지의 색을 배열로 만든 후, 회전시키는 예제 / PMI 구현에 참고할 예정__*   
 *__- [File] html file -> ex1CircleRotate.html, js file -> rotate.js, css file -> style.css__*    
