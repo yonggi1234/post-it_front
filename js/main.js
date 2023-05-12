@@ -1,26 +1,28 @@
-let postIts = [];
+// let postIts = [];
+// //포스트잇 생성
+// function createPostIt() {
+// var board = document.getElementById("board");
+// var boardRect = board.getBoundingClientRect();
+// var boardX = boardRect.left;
+// var boardY = boardRect.top;
 
-function createPostIt() {
-var board = document.getElementById("board");
-var boardRect = board.getBoundingClientRect();
-var boardX = boardRect.left;
-var boardY = boardRect.top;
+// var randomX = Math.floor(Math.random() * (board.offsetWidth - 100));
+// var randomY = Math.floor(Math.random() * (board.offsetHeight - 100));
 
-var randomX = Math.floor(Math.random() * (board.offsetWidth - 100));
-var randomY = Math.floor(Math.random() * (board.offsetHeight - 100));
+// var postIt = document.createElement("div");
+// postIt.className = "post-it";
+// postIt.style.left = (boardX + randomX) + "px";
+// postIt.style.top = (boardY + randomY) + "px";
+// postIt.innerHTML = "New Post-it";
+// board.appendChild(postIt);
 
-var postIt = document.createElement("div");
-postIt.className = "post-it";
-postIt.style.left = (boardX + randomX) + "px";
-postIt.style.top = (boardY + randomY) + "px";
-postIt.innerHTML = "New Post-it";
-board.appendChild(postIt);
-
-dragElement(postIt);
+// dragElement(postIt);
         
-// 생성한 포스트잇을 배열에 저장
-postIts.push(postIt);
-}
+// // 생성한 포스트잇을 배열에 저장
+// postIts.push(postIt);
+// }
+
+
 // function createPostIt(importance, size, color) {
 //   const postIt = document.createElement('div');
 //   postIt.classList.add('post-it');
@@ -72,12 +74,30 @@ postIts.push(postIt);
 //   board.appendChild(postIt);
 // }
 
-function deletePostIt() {
-    // 배열에서 가장 최근에 생성된 포스트잇 선택하여 삭제
-    let lastPostIt = postIts.pop();
-    lastPostIt.remove();
-    }
+
+// function deletePostIt() {
+//     // 배열에서 가장 최근에 생성된 포스트잇 선택하여 삭제
+//     let lastPostIt = postIts.pop();
+//     lastPostIt.remove();
+// }
+
   
+//이미지 드래그
+const postItImgs = document.querySelectorAll('.post_it_img');
+postItImgs.forEach(postItImg => {
+    dragElement(postItImg);
+});
+//이미지 우클릭으로 삭제
+const postItImgsdel = document.querySelectorAll('.post_it_img');
+postItImgs.forEach(postItImg => {
+    dragElement(postItImg);
+    postItImg.addEventListener('contextmenu', function(e) {
+        e.preventDefault(); // 브라우저 기본 동작 막기
+        this.parentNode.removeChild(this);
+    });
+});
+
+
 // 포스트잇을 드래그할 수 있도록 하는 함수
 function dragElement(element) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
