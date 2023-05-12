@@ -1,3 +1,4 @@
+/* PMI 보드에 대한 CSS - pmi.js 와 연결 */
 h1 {
     text-align:center;
 }
@@ -9,6 +10,7 @@ h1 {
     left: 0;
     right: 0;
     margin:auto;
+    z-index: -1;
 }
 
 #circle {
@@ -18,4 +20,5 @@ h1 {
     left: 0;
     right: 0;
     margin:auto;
+    z-index: -1;
 }
