@@ -137,15 +137,6 @@ class Polygon {
             var image = document.getElementById("blue");
             ctx.drawImage(image, 0, 0, 30, 30);            
           }
-
-          function drag(target, food) {		//드래그 시작시 호출 할 함수
-            food.dataTransfer.setData('Text', target.id);
-          };
-          function drop(target, food) {		//드롭시 호출 할 함수
-            var id = food.dataTransfer.getData('Text');
-            target.appendChild(document.getElementById(id));
-            food.preventDefault();	
-          }
           
           ctx.fill();
           ctx.closePath();
