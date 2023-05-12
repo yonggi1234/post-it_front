@@ -14,6 +14,26 @@ body {
     cursor: move;
     z-index: 2;
 }
+
+img {
+    width: 100px;
+    height: 100px;
+  }
+/* .image {
+    position: absolute;
+} */
+
+/* .post-it h2 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .post-it p {
+    margin: 10px 0 0;
+    font-size: 14px;
+  } */
+
+  
 .board {
     width: 700px;
     height: 700px;
@@ -94,7 +114,7 @@ body {
 .wow-text {
     color: skyblue;
 }
-  
+
 .toolkit-text {
     font-size: 13px;
     display: block;
