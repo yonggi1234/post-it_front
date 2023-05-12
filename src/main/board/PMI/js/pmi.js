@@ -1,3 +1,4 @@
+// PMI 보드의 모습을 구현
 var ctx = document.getElementById('myCanvas').getContext("2d");
 var gra = ctx.createLinearGradient(0,0,500,550);
 gra.addColorStop(0, 'OrangeRed');
