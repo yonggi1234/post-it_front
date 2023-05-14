@@ -18,7 +18,7 @@ CREATE TABLE post(
   position_x int(5) NOT NULL,
   position_y int(5) NOT NULL,
 -- 포스트잇 색(5가지)  
-  color enum('orange','blue''green','yellow','red'),
+  color enum('orange','blue''green','yellow','pink'),
 -- 중요도(1~6)
   importance int(2)  check(importance between 1 and 6),
 -- 포스트잇 크기구분(big:1, small: 0)  
