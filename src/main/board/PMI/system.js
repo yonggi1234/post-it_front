@@ -5,9 +5,6 @@ function resizeBoard() {
     var circle3 = document.getElementById("circle3");
     var circle4 = document.getElementById("circle4");
     var circle5 = document.getElementById("circle5");
-    var text1 = document.getElementById("text1");
-    //var text2 = document.getElementById("text2");
-    //var text3 = document.getElementById("text3");
 
     var windowWidth = window.innerWidth;
     var windowHeight = window.innerHeight;
