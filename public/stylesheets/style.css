@@ -1,0 +1,35 @@
+body{background-color: grey;}
+header .container{
+    position: absolute;
+    top: 0; left: 0; z-index: 100; width: 100%;
+    background-color:white;
+}
+.headA{
+    display: inline-block;
+    line-height: 70px; padding-left: 20px; padding-right: 20px;
+    background-color: rgb(93, 93, 255); color: white;
+    font: size 24px; text-decoration: none; 
+}
+
+.headB ul{
+    margin: 0; padding: 0; list-style: none;
+}
+
+.headB a{
+    display: block; padding: 5px; color: inherit;
+    font-style: 12px; text-decoration: none;
+}
+.headB a:hover{
+    background-color: pink;
+}
+@media(min-width:930px){
+    header .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .headB ul{ display: flex;}
+}
