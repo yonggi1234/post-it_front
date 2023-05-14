@@ -4,43 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/stylesheets/kanban.css">
     <title>Document</title>
-    <style>
-        .header{display: flex; justify-content: center;}
-.container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    }
-    .column {
-        padding: 5px;border-radius: 3px;flex-basis: 15%;
-        background: rgb(205, 205, 205);
-        min-height: 500px;min-width: 150px;
-        text-align: center;font-size: 12px;
-    }
-    
-    .box{text-align: center;padding: 5px;border-radius: 3px;margin-bottom: 5px;}
-    .blue{background: blue;color:white;}
-    .orange{background: orange;}
-    .pink{background-color: pink;}
-    .yellow{background-color: yellow;}
-    .green{background-color: green;}
-    .postit{
-        margin: 20px;padding: 20px; border-radius: 10px;
-        background: white;
-    }
-    </style>
+    <link rel="stylesheet" href="/stylesheets/kanban.css">
 </head>
 <body>
-    <script>
-        const columns = document.querySelectorAll(".column");
-        columns.forEach((column) => {
-        new Sortable(column, {
-            group: "shared", animation: 150
-            });
-        });
-    </script>
+    
     <div class="header">
         <h1>KANBAN</h1>
     </div>
@@ -48,9 +16,11 @@
         <div>
             <p class="box pink">PINK</h1>
             <div class="column">
+                <% for(let i=0;i<data.length;i++){ %>
                 <div class="postit" draggable="true">
-                    <img src="C:\Users\litte\Desktop\github\post-it_front\src\main\img\blue.png" width="100">
-                </div>
+                        <img src=<%= data[i].img %> width="100">
+                    </div>
+                <% } %>
             </div>
         </div>
         <div>
@@ -75,6 +45,6 @@
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js" integrity="sha512-zYXldzJsDrNKV+odAwFYiDXV2Cy37cwizT+NkuiPGsa9X1dOz04eHvUWVuxaJ299GvcJT31ug2zO4itXBjFx4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/public/js/kanban.js""></script>
+    <script src="/js/kanban.js""></script>
 </body>
 </html>

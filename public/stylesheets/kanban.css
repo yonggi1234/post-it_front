@@ -7,7 +7,7 @@
     .column {
         padding: 5px;border-radius: 3px;flex-basis: 15%;
         background: rgb(205, 205, 205);
-        min-height: 500px;min-width: 150px;
+        min-height: 700px;min-width: 150px;
         text-align: center;font-size: 12px;
     }
     
