@@ -4,7 +4,8 @@
 git clone https://github.com/yonggi1234/post-it_front.git
 ```
 * db 구성
-mysql에서 .vscode\src\post_db.sql으 sql문 실행
+
+mysql에서 .vscode\src\post_db.sql을 sql문 실행
 
 
 #### Nodejs/Express 초기 설정
