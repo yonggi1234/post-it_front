@@ -16,7 +16,7 @@ mysql에서 .vscode\src\post_db.sql으 sql문 실행
 https://nodejs.org/ko
 https://www.mysql.com/downloads/
 ```
-2. 터미널로 이동 후라이브러리 설치
+2. 터미널로 이동 후 라이브러리 설치
 ```
 npm init
 ```
