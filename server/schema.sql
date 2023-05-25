@@ -1,0 +1,11 @@
+-- $.ajax({
+--   url: '/image/1',
+--   type: 'GET',
+--   success: (data) => {
+--     const imageUrl = data.imageUrl;
+--     const x = data.x;
+--     const y = data.y;
+--     $('#image').attr('src', imageUrl);
+--     $('#image').css({left: x, top: y});
+--   }
+-- });

@@ -4,12 +4,42 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../css/main.css">
         <title>Wow Board Scamper</title>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     </head>
     <body>
+        <!-- <div id="board2"></div>
+        <script src="/static/main.js"></script>
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                // 서버에서 이미지 데이터를 가져와서 로드하는 함수
+                function loadImagesFromServer() {
+                    fetch('/postit')
+                        .then(response => response.json())
+                        .then(data => {
+                            // 가져온 데이터를 기반으로 이미지를 생성하고 보드에 추가하는 로직 작성
+                            data.forEach(postit => {
+                                const { img, position_x, position_y } = postit;
+                                const imgElement = document.createElement('img');
+                                imgElement.src = img;
+                                imgElement.style.left = position_x + 'px';
+                                imgElement.style.top = position_y + 'px';
+                                document.getElementById('board2').appendChild(imgElement);
+                            });
+                        })
+                        .catch(error => {
+                            console.error('이미지 로드 에러:', error);
+                        });
+                }
+
+                // 이미지 로드 함수 호출
+                loadImagesFromServer();
+            });
+        </script> -->
         <div id="board">
             <!-- <img src="file:///C:/capstone/capstonebasic/post_it_images/blue.png">
             <img src="file:///C:/capstone/capstonebasic/post_it_images/orange.png">
             <img src="file:///C:/capstone/capstonebasic/post_it_images/red.png"> -->
+
             <div class="post_it_img blue"></div>
             <div class="post_it_img orange"></div>
             <div class="post_it_img red"></div>
