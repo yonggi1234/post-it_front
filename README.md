@@ -20,6 +20,7 @@ https://www.mysql.com/downloads/
 2. 터미널로 이동 후 라이브러리 설치
 ```
 npm init
+npm install --save multer
 ```
 3. express 프레임워크 설치
 ```
