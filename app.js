@@ -57,6 +57,26 @@ app.get('/pmi', function (req, res) {
         else res.render('pmi', {data : result});
     });
 });
+  app.get('/api/postits', function (req, res) {
+    var sql = "SELECT img, position_x, position_y FROM post";
+    connection.query(sql, function (err, result, fields) {
+      if (err) {
+        console.log(err);
+        res.sendStatus(500);
+      } else {
+        // 가져온 데이터를 기반으로 이미지를 생성하고 보드에 추가하는 로직 작성
+        var postits = result.map(postit => {
+          return {
+            img: postit.img,
+            position_x: postit.position_x,
+            position_y: postit.position_y
+          };
+        });
+        res.json(postits);
+      }
+    });
+  });
+  
 app.get('/scammper', function (req, res) {
     var sql ="SELECT img FROM post";
     connection.query(sql, function (err, result, fields) {
