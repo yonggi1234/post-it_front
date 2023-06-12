@@ -1,26 +1,17 @@
-body {
-    margin: 0;
-    padding: 0;
-}
 .postit {
     position: absolute;
-    width: 100px;
-    height: 100px;
     background-size: contain;
     z-index: 2;
   }
 
-  
 .board {
-    width: 500px;
-    height: 500px;
+    position: absolute;
+    top: 100%; left: 50%;
+    width: 1500px; height: 1500px;
     background-color: white;
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
-    position: absolute;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
     padding: 77px 30px 30px 30px;
     border-radius: 70px;
@@ -28,7 +19,7 @@ body {
 }
 .square {
     width: calc(100% / 7);
-    height: calc(100% / 7);
+    height: calc(90% / 7);
     border: 1px solid #ccc;
     box-sizing: border-box;
     display: flex;
@@ -42,49 +33,30 @@ body {
     background-color: rgb(217, 216, 219);
 }
 .additional-box {
-    position: absolute;
-    top: 2%;
-    left: 63%;
-    width: 30%;
-    height: 56px;
+    position: relative;
+    top: -1%; left: 60%;
+    width: 40%;height: 90px;
     border: 1px solid #ccc;
     background-color: white;
     color: white;
     /* display: flex; */
     justify-content: center;
     align-items: center;
-    font-size: 8px;
+    font-size: 30px;
     font-weight: bold;
     z-index: 1;
     border-radius: 14px;
 }
 .additional-box2 {
-    position: absolute;
-    top: 2%;
-    left: 7%;
-    width: 45%;
-    height: 50px;
+    position: relative;
+    top: -1%; left: -40%;
+    width: 50%;height: 150px;
     background-color: white; 
     color: black;
     /* display: flex; */
     justify-content: center;
     align-items: center;
-    font-size: 21px;
-    font-weight: bold;
-    z-index: 1;
-}
-.additional-box3 {
-    position: absolute;
-    top: 96%;
-    left: 75%;
-    width: 13%;
-    height: 20px;
-    background-color: white; 
-    color: black;
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
-    font-size: 13px;
+    font-size: 50px;
     font-weight: bold;
     z-index: 1;
 }
@@ -93,14 +65,28 @@ body {
 }
 
 .toolkit-text {
-    font-size: 9px;
+    font-size: 20px;
     display: block;
 }
 .blank-text {
-    font-size: 10px;
+    font-size: 30px;
     color: gray;
 }
 .address-text {
     font-size: 9px;
     color: skyblue;
+}
+
+button{
+    width: 120px;
+    height: 40px;
+    background-color: #ccc;
+    position: absolute;
+    top: 3%;
+    right: 10%;
+}
+button:focus{ outline: 0; }
+button:hover{ 
+    background-color: #bbb9b9;    
+    cursor: pointer;
 }

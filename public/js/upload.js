@@ -4,3 +4,5 @@ const dropzone = new Dropzone("div.dropzone", {
   method: 'post',
 });
 
+
+

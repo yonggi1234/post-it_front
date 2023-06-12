@@ -1,4 +1,4 @@
-.header{display: flex; justify-content: center;}
+.header{display: flex; justify-content: center;padding: 30px;}
 .container {
     display: flex;
     justify-content: center;
@@ -7,17 +7,22 @@
     .column {
         padding: 5px;border-radius: 3px;flex-basis: 15%;
         background: rgb(205, 205, 205);
-        min-height: 700px;min-width: 150px;
+        min-height: 800px;min-width: 150px;
         text-align: center;font-size: 12px;
     }
     
-    .box{text-align: center;padding: 5px;border-radius: 3px;margin-bottom: 5px;}
-    .blue{background: blue;color:white;}
+    .box{
+        line-height: 205%; text-align: center; padding: 5px; margin-bottom: 5px;
+        border-radius: 3px; height: 40px; vertical-align: middle; font-size: 20px; font-weight:bold;
+    }
+    .black{background-color: black; color: white;}
+    .blue{background: blue; color:white;}
     .orange{background: orange;}
     .pink{background-color: pink;}
     .yellow{background-color: yellow;}
     .green{background-color: green;}
     .postit{
         margin: 20px;padding: 20px; border-radius: 10px;
+        height: 110px;
         background: white;
     }

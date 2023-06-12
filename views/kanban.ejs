@@ -1,46 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include('nav.ejs') %>
     <link rel="stylesheet" href="/stylesheets/kanban.css">
 </head>
 <body>
     
-    <div class="header">
+    <!-- <div class="header">
         <h1>KANBAN</h1>
-    </div>
+    </div> -->
     <div class="container">
         <div>
-            <p class="box pink">PINK</h1>
+            <p class="box black">Best</h1>
             <div class="column">
                 <% for(let i=0;i<data.length;i++){ %>
-                <div class="postit" draggable="true">
-                        <img src=<%= data[i].img %> width="100">
-                    </div>
+                    <% if (950<=data[i].position_x&&data[i].position_x<=1220&&940<=data[i].position_y&&data[i].position_y<=1220){ %>
+                        <div class="postit" draggable="true">
+                            <img src=<%= data[i].img %> width="100">
+                        </div>
+                    <% }%>
                 <% } %>
             </div>
         </div>
         <div>
-            <p class="box blue">BLACK</h1>
+            <p class="box black">Good</h1>
             <div class="column">
+                <% for(let i=0;i<data.length;i++){ %>
+                    <% if (700<=data[i].position_x&&data[i].position_x<=1470&&680<=data[i].position_y&&data[i].position_y<=1470){ %>
+                        <% if (950>data[i].position_x||data[i].position_x>1220||940>data[i].position_y||data[i].position_y>1220){ %>
+                            <div class="postit" draggable="true">
+                                <img src=<%= data[i].img %> width="100">
+                            </div>
+                        <% }%>
+                    <% }%>
+                <% }%>
             </div>
         </div>
         <div>
-            <p class="box orange">ORANGE</h1>
+            <p class="box black">Ideas</h1>
             <div class="column">
+                <% for(let i=0;i<data.length;i++){ %>
+                    <% if (500<=data[i].position_x&&data[i].position_x<=1660&&500<=data[i].position_y&&data[i].position_y<=1660){ %>
+                        <% if (700>data[i].position_x||data[i].position_x>1470||680>data[i].position_y||data[i].position_y>1470){ %>
+                            <div class="postit" draggable="true">
+                                <img src=<%= data[i].img %> width="100">
+                            </div>
+                        <% }%>
+                    <% } %>
+                <% } %>
             </div>
         </div>
         <div>
-            <p class="box yellow">YELLOW</h1>
-            <div class="column">
+            <p class="box black">Square</h1>
+            <div class="column">        
+                <% for(let i=0;i<data.length;i++){ %>
+                    <% if (data[i].size==1){ %>
+                        <div class="postit" draggable="true">
+                            <img src=<%= data[i].img %> width="100">
+                        </div>
+                    <% }%>
+                <% } %>
             </div>
         </div>
         <div>
-            <p class="box green">GREEN</h1>
-            <div class="column">
+            <p class="box black">Rectangle</h1>
+            <div class="column">        
+                <% for(let i=0;i<data.length;i++){ %>
+                    <% if (data[i].size==0){ %>
+                        <div class="postit" draggable="true">
+                            <img src=<%= data[i].img %> width="100">
+                        </div>
+                    <% } %>
+                <% } %>
             </div>
         </div>
     </div>

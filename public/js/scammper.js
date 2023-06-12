@@ -17,9 +17,12 @@ window.addEventListener('DOMContentLoaded', function() {
     function createPostIts() {
         postItImgs.forEach(function(postit) {
             var postItElement = document.createElement('div');
-            postItElement.className = 'postit';
+            postItElement.className = postit.img;
             postItElement.style.left = postit.position_x + 'px';
             postItElement.style.top = postit.position_y + 'px';
+            postItElement.style.position='absolute';
+            postItElement.style.backgroundSize='contain';
+            postItElement.style.zIndex=2;
 
             var imgElement = document.createElement('img');
             imgElement.src = postit.img;
@@ -31,6 +34,7 @@ window.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
 
 // 이미지 드래그 가능하도록 만드는 함수
 function makeDraggable(element) {
@@ -73,3 +77,25 @@ function addDoubleClickEvent(element) {
         this.parentNode.removeChild(this);
     });
 }
+
+var save=document.getElementById("save");
+
+save.addEventListener('click',function(){
+    var postDIR=document.querySelectorAll('[class*=img]')
+    postDIR.forEach(function(post) {
+        var postedit = 
+        {
+            img: post.className,
+            position_x: getComputedStyle(post).left,
+            position_y: getComputedStyle(post).top,
+        };
+        console.log(postedit);
+        fetch('/api/save',{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(postedit)
+          });
+    });
+});
