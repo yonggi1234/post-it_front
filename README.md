@@ -21,6 +21,7 @@ https://www.mysql.com/downloads/
 ```
 npm init
 npm install --save multer
+npm install node-fetch
 ```
 3. express 프레임워크 설치
 ```
