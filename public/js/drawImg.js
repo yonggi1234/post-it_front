@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', function() {
   var board = document.getElementById('board');
   var postItImgs = [];
 
-  fetch('/api/postits')
+  fetch('/api/pmi')
     .then(function(response) {
       return response.json();
     })
@@ -51,16 +51,26 @@ window.addEventListener('DOMContentLoaded', function() {
       console.log('Error:', error);
     });
 
-  function createPostIts() {
+    function createPostIts() {
       postItImgs.forEach(function(postit) {
           var postItElement = document.createElement('div');
-          postItElement.className = 'postit';
+          postItElement.className = postit.img;
           postItElement.style.left = postit.position_x + 'px';
           postItElement.style.top = postit.position_y + 'px';
+          postItElement.style.position='absolute';
+          // postItElement.style.backgroundSize=150+'px';
+          postItElement.style.zIndex=2;
 
           var imgElement = document.createElement('img');
-          imgElement.src = postit.img;
-
+          imgElement.src = postit.img+'.jpeg';
+          if (postit.size==0){
+            imgElement.style.width=150+'px';
+            imgElement.style.height=75+'px';
+          }
+          else{
+            imgElement.style.width=150+'px';
+            imgElement.style.height=150+'px';
+          }
           postItElement.appendChild(imgElement);
           board.appendChild(postItElement);
           addDoubleClickEvent(postItElement);

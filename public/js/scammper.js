@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var board = document.getElementById('board');
     var postItImgs = [];
 
-    fetch('/api/postits')
+    fetch('/api/scammper')
       .then(function(response) {
         return response.json();
       })
@@ -21,12 +21,17 @@ window.addEventListener('DOMContentLoaded', function() {
             postItElement.style.left = postit.position_x + 'px';
             postItElement.style.top = postit.position_y + 'px';
             postItElement.style.position='absolute';
-            postItElement.style.backgroundSize='contain';
             postItElement.style.zIndex=2;
-
+            
             var imgElement = document.createElement('img');
-            imgElement.src = postit.img;
-
+            imgElement.src = postit.img+'.jpeg';
+            imgElement.style.width=150+'px';
+            if(postit.size == 0){
+                imgElement.style.height=75+'px';
+            }
+            else{
+                imgElement.style.height=150+'px';
+            }
             postItElement.appendChild(imgElement);
             board.appendChild(postItElement);
             addDoubleClickEvent(postItElement);
@@ -78,24 +83,24 @@ function addDoubleClickEvent(element) {
     });
 }
 
-var save=document.getElementById("save");
+// var save=document.getElementById("save");
 
-save.addEventListener('click',function(){
-    var postDIR=document.querySelectorAll('[class*=img]')
-    postDIR.forEach(function(post) {
-        var postedit = 
-        {
-            img: post.className,
-            position_x: getComputedStyle(post).left,
-            position_y: getComputedStyle(post).top,
-        };
-        console.log(postedit);
-        fetch('/api/save',{
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(postedit)
-          });
-    });
-});
+// save.addEventListener('click',function(){
+//     var postDIR=document.querySelectorAll('[class*=img]')
+//     postDIR.forEach(function(post) {
+//         var postedit = 
+//         {
+//             img: post.className,
+//             position_x: getComputedStyle(post).left,
+//             position_y: getComputedStyle(post).top,
+//         };
+//         console.log(postedit);
+//         fetch('/api/save',{
+//             method: "get",
+//             headers: {
+//                 "Content-Type": "application/json"
+//             },
+//             body: JSON.stringify(postedit)
+//           });
+//     });
+// });
